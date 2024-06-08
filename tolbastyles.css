@@ -470,3 +470,20 @@ nav li a:hover {
     .modal-content ul li {
     margin-bottom: 10px;
     }
+/* General styling for sections */
+.coming-soon-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.coming-soon-message h2 {
+    font-size: 24px;
+    color: #666;
+}
