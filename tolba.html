@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sen. Ibrahim Hassan Dankwambo</title>
+    <link rel="stylesheet" href="tolbastyles.css">
+    <style>
+         nav {
+    background-color: #b40d0d;
+    overflow: hidden;
+    text-align: center; /* Center the content horizontally */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list items display in a row */
+    justify-content: center; /* Center the navigation items horizontally */
+}
+
+nav li {
+    float: none; /* Remove float */
+    display: inline-block; /* Display list items inline */
+}
+
+        nav li a:hover {
+            background-color: #111;
+        }
+        
+        .text-content {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .read-more-content {
+            display: none;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-height: 80%;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-image: url('path/to/your-background-image.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(0, 0, 0); /* Ensure the text is readable */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .modal-content p {
+            font-size: 18px;
+            line-height: 1.0;
+            margin-bottom: 10px;
+        }
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        .content-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .nav-menu a {
+            color: white; /* Link color */
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-weight: bold; /* Make the font bold */
+        }
+
+        .nav-menu a:hover {
+            background-color: #ffffff;
+            color: rgb(151, 18, 18);
+            font-size: large;
+            border-style: outset;
+            text-shadow: 1px 1px #ffffff;
+        }
+
+    </style>
+<style>
+    /* General Modal Styles */
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+        animation: fadeIn 1.0s;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    /* Modal Content Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+        border-radius: 15px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        animation: slideIn 0.5s;
+    }
+
+    @keyframes slideIn {
+        from {transform: translateY(-50px);}
+        to {transform: translateY(0);}
+    }
+
+    /* Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #ff0000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Heading and Image Styling */
+    .modal-content h2 {
+        font-family: 'Arial', sans-serif;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .modal-content img {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Paragraph Styling */
+    .modal-content p {
+        font-family: 'Georgia', serif;
+        color: #000000;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: justify;
+        font-size: 1.1em;
+    }
+
+    /* Unordered List Styling */
+    .modal-content ul {
+        font-family: 'Georgia', serif;
+        color: #000000;
+        line-height: 2.0;
+        margin-bottom: 15px;
+        text-align: justify;
+        padding-left: 20px;
+        font-size: 1.0em;
+        font-weight: bold;
+    }
+
+    .modal-content ul li {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <img src="senate-logo.png" alt="Senate Logo" class="left-logo">
+        <img src="pdp-logo.png" alt="PDP Logo" class="right-logo">
+        <h1>Sen. Ibrahim Hassan Dankwambo</h1>
+    </header>
+
+    <nav>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about" >About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#get-involved">Get Involved</a></li>
+            <li><a href="#contact">Contact</a></li>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="two-column-container">
+        <div class="image-column">
+            <img src="gov_picture.jpg" alt="Gov. Ibrahim Hassan Dankwambo" class="profile-picture">
+        </div>
+        <div class="text-column">
+            <h2>Welcome to the Official Website Of <p><span class="color-red">Sen.</span> <span class="color-green">Dankwambo</p></span></h2>
+                <hr>
+            <p>This platform is dedicated to sharing the journey, vision, and achievements of Sen. Dankwambo.</p>
+            <p>Explore the site to learn more about his commitment to education, his impactful political career, and his 
+                dedication to our community. Your support is vital as we strive to continue his legacy of positive change and progress.</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="unique-about-section">
+        <div class="section-header">
+            <h1><span class="color-red">About</span> <span class="color-ash">Sen.</span> <span class="color-green">Dankwambo</span></h1>
+            <hr>
+        </div>
+        <div class="content-box">
+            <div class="box">
+                <div class="icon">
+                    <img src="dankwambo_portrait.jpg" alt="Education Image" class="education-image">
+                </div>
+                <h3>His Education</h3>
+                <hr>
+                <p class="text-content">
+                    <!-- Detailed biography -->
+                    Ibrahim Hassan Dankwambo, a towering figure in Nigerian politics, was born on April 2, 1962, in Gombe State, Nigeria. Raised in a prominent family deeply rooted in the values of education and community service, Dankwambo's early years were marked by a dedication to learning and a strong work ethic instilled by his parents. His father, Alh Mohammed Hassan Dankwambo, a respected businessman and traditional leader, played a significant role in shaping his son's character and aspirations. Dankwambo's mother, Hajiya Hajara, a woman of great wisdom and compassion, provided unwavering support and guidance throughout his formative years.
+                    From his early schooling at Hassan Central Primary School, where he distinguished himself as a bright and diligent student, to his secondary education at Government Secondary School Billiri, where he excelled academically and demonstrated exceptional leadership qualities, Dankwambo's educational journey laid the foundation for his future success. His time at Ahmadu Bello University further honed his intellect and leadership skills, preparing him for the challenges and opportunities that lay ahead.
+                    After completing his formal education, Dankwambo embarked on a distinguished career in public service and academia. His expertise in economics, accounting, and financial management earned him accolades and recognition both nationally and internationally. As a leader, he has consistently advocated for policies and initiatives that promote social justice, economic development, and good governance.
+                    Dankwambo's contributions to education, entrepreneurship, and community development have left an indelible mark on Nigeria's socio-economic landscape. His visionary leadership and unwavering commitment to the betterment of society continue to inspire generations of Nigerians to strive for excellence and make meaningful contributions to their communities and country.
+                </p>
+                <button class="read-more" data-target="educationModal">Read More</button>
+            </div>
+            
+            <div class="box">
+                <div class="icon">
+                    <img src="path-to-professional-career-image.png" alt="Political Career Image" class="political-career-image">
+                </div>
+                <h3>His Political Career</h3>
+                <hr>
+                <p class="text-content">Sen. Ibrahim Hassan Dankwambo, former Accountant-General of Nigeria, served two terms as Governor of Gombe State (2011-2019). During his tenure, he prioritized education, healthcare, infrastructure, and youth empowerment, earning a reputation for accountability and transparency. Now, as a senator, he champions economic growth, job creation, and social justice, advocating for a prosperous, inclusive Nigeria.<span class="read-more-content"> His political career has been marked by significant achievements in governance and public service.</span></p>
+                <button class="read-more" data-target="politicalCareerModal">Read More</button>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <img src="path/to/family-image.png" alt="Family Image" class="family-image">
+                </div>
+                <h3>His Family</h3>
+                <hr>
+                <p class="text-content">Family is the cornerstone of Sen. Ibrahim Hassan Dankwambo's life. 
+                    He is happily married to Hajiya Adama Ibrahim Dankwambo, and together, they have nurtured
+                     a loving and supportive household. The Dankwambo family stands as a testament to the values of unity,
+                      respect, and mutual support, embodying the saying "behind every successful man there is a woman."<span class="read-more-content">
+                         The Dankwambo family's support has been instrumental in his success and public service.</span></p>
+                <button class="read-more" data-target="familyModal">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal for Education -->
+<div id="educationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>His Education</h2>
+        <img src="dankwambo_portrait.jpg" alt="Education Image">
+        <hr>
+        <p>Ibrahim Hassan Dankwambo, a prominent figure in Nigerian politics, was born on April 2, 1962, in Gombe State, Nigeria. His early life was shaped by his upbringing in a reputable family in Herwagana ward, Gombe Local Government Area. His father, Alh Mohammed Hassan Dankwambo, was not only a successful businessman but also held the prestigious title of Talba of the Gombe Emirate until his passing in 1990. Dankwambo's mother, Hajiya Hajara, hailed from a respected lineage, being the daughter of Alhaji Samaila Muhammad, the revered Imam of the Bolari Chief Mosque.</p>
+        <p>From a young age, Dankwambo showed remarkable academic prowess, mastering verses from the Quran and excelling in primary education at Hassan Central Primary School in Gombe. His outstanding performance caught the attention of his teachers and peers, setting him apart as a standout student.</p>
+        <p>His secondary education at Government Secondary School Billiri further solidified his reputation for excellence. Despite the rigorous routine of a boarding school, Dankwambo maintained his focus, demonstrating discipline and commitment to his studies. He was not only academically gifted but also actively engaged in extracurricular activities, particularly excelling in sports like table tennis.</p>
+        <p>Dankwambo's educational journey continued at Ahmadu Bello University (ABU), Zaria, where he pursued a Bachelor of Science in Accounting. His time at ABU was marked by academic excellence and active involvement in social and sports activities. He graduated with a second-class upper degree, distinguishing himself as one of the best students in his cohort.</p>
+        <p>Driven by a thirst for knowledge and academic achievement, Dankwambo pursued further studies, earning a Master's degree in Economics from the University of Lagos and a PhD in Accounting from Igbenideon University, Okada. His academic pursuits were not confined to traditional subjects; he also undertook postgraduate studies in Computer Science at Delta State University, Abraka.</p>
+        <p>Throughout his academic journey, Dankwambo's passion for learning and his dedication to excellence remained unwavering. His expertise spans various fields, including economics, accounting, taxation, forensic auditing, and financial management. He is recognized both nationally and internationally for his contributions to research and knowledge dissemination.</p>
+        <p>In addition to his academic accomplishments, Dankwambo's career in public service and politics has been equally illustrious. His leadership roles have earned him widespread admiration and respect, solidifying his status as a visionary leader committed to the advancement of his community and the nation at large.</p>
+    </div>
+</div>
+
+
+    <!-- The Modal for Political Career -->
+<div id="politicalCareerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>His Political Career</h2>
+        <img src="path-to-professional-career-image.png" alt="Political Career Image">
+        <p>Dr. Ibrahim Hassan Dankwambo's career spans both the private and public sectors. He started at Coopers and Lybrand International Chartered Accountants (now Price Waterhouse Coopers) from 1985 to 1988, then moved to the Central Bank of Nigeria, serving from 1988 to 1999.</p>
+        <p>His virtues for hard work, dedication, and commitment led to his appointment as Accountant General of Gombe State by the then Executive Governor, late Alhaji Abubakar Habu Hashidu. Dankwambo held this position until April 2005, when President Olusegun Obasanjo appointed him as the Accountant General of the Federation. During his tenure, he achieved significant reforms:</p>
+        <ul>
+            <li>Construction of the Treasury House, Nigeria’s accounting headquarters.✅</li>
+            <li>Introduction of a cashless economy regime and the E-payment system, ending the era of cheques in government business.✅</li>
+            <li>Implementation of the Integrated Payroll Personnel Information System (IPPIS) for centralized salary payments.✅</li>
+            <li>Establishment of the Treasury Single Account (TSA) for streamlined government revenue management.✅</li>
+            <li>Conceptualization and execution of the Government Integrated Financial Management System (GIFMIS).✅</li>
+            <li>Creation of a Central Capital Accounting System for efficient contract payments.✅</li>
+            <li>Introduction of the Accounting Transactions Recording and Reporting System (ATRRS) for electronic transmission of accounts.✅</li>
+            <li>Upgraded Nigeria’s Financial Statements to International Standards and set up the International Public Sector Accounting Standards Board (IPSASB).✅</li>
+            <li>Upgraded the Federal Treasury Academy, affiliating it with the Chartered Institute of Public Finance and Accountancy (CIPFA) of the UK.✅</li>
+            <li>Handled pension payments effectively and built offices for his organization in several state capitals.✅</li>
+        </ul>
+        <p>In the 2011 elections, Dankwambo was elected as the Governor of Gombe State under the PDP platform, winning by a large margin. His tenure as governor was marked by a focus on education, infrastructure, healthcare, water supply, environmental control, and economic empowerment. He created and started implementing a development plan for the state and organized the North-east Economic Summit in 2013 to address regional development and security challenges.</p>
+        <p>As governor, he retained almost all aides from his predecessor, fostering teamwork and continuity. His administration stood out in Northern Nigeria, even during the challenging 2015 elections. After his governorship, he continued his political journey, becoming a senator and championing economic growth, job creation, and social justice for a prosperous, inclusive Nigeria.</p>
+    </div>
+</div>
+
+
+    <!-- The Modal for Family -->
+    <div id="familyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>His Family</h2>
+            <img src="path/to/family-image.png" alt="Family Image">
+            <p>His Excellency, Ibrahim Hassan Dankwambo PhD, was honored with the esteemed title of Talban Gombe on December 27th, 1991, by His Royal Highness, the Tenth Emir of Gombe, Alhaji Shehu Usman Abubakar CON, who reigned from 1984 to 2014. The title of Talba reflects Dankwambo's significant contributions to his community and his respected status within the Gombe Emirate.</p>
+            <p>Dankwambo has enjoyed a long and fulfilling marriage with Hajiya Adama Muhammad Inuwa. They have been together for over 30 years, a testament to their enduring partnership and mutual support. The couple is blessed with six children:</p>
+            <ul>
+                <li>Muhammad Munir Dankwambo</li>
+                <li>Muhammad Inuwa Dankwambo (Khalifa)</li>
+                <li>Hafsat Dankwambo</li>
+                <li>Abubakar Sadiq Dankwambo</li>
+                <li>Ibrahim Dankwambo</li>
+                <li><span style="color: red;">Late Hajara Dankwambo</span></li>
+            </ul>
+            <p>Their family legacy continues with two grandchildren, Ibrahim and Adama, who bring joy and continuity to the family lineage. Hajiya Adama is not only a devoted wife but also a loving and generous mother. Her qualities of patience, understanding, tolerance, and unwavering support have been pivotal in Dankwambo's journey. Her steadfast love and encouragement embody the saying, “behind every successful man, there is a woman,” highlighting her crucial role in his achievements and their shared success.</p>
+        </div>
+    </div>
+    
+    
+        <script>
+            document.querySelectorAll('.read-more').forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = document.getElementById(button.getAttribute('data-target'));
+                    modal.style.display = "block";
+                });
+            });
+    
+            document.querySelectorAll('.close').forEach(span => {
+                span.addEventListener('click', () => {
+                    span.closest('.modal').style.display = "none";
+                });
+            });
+    
+            window.addEventListener('click', (event) => {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = "none";
+                }
+            });
+            
+    // Get the modal
+    var modal = document.getElementById('educationModal');
+
+    // Get the button that opens the modal
+    var btn = document.querySelector('.read-more[data-target="educationModal"]');
+
+    // Get the <span> element that closes the modal
+    var span = document.querySelector('.close[data-target="educationModal"]');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+</script>
+
+        </script>
+        
+    </body>
+    </html>
+    

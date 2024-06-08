@@ -1,0 +1,472 @@
+/* General styles for the body and page */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+.header {
+    background: #ff0000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.left-logo, .right-logo {
+    position: absolute;
+    top: 10px;
+    height: 120px;
+}
+
+.left-logo {
+    left: 10px;
+}
+
+.right-logo {
+    right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #ff0000;
+    overflow: hidden;
+    text-align: center; /* Center the content horizontally */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list items display in a row */
+    justify-content: center; /* Center the navigation items horizontally */
+}
+
+nav li {
+    float: none; /* Remove float */
+    display: inline-block; /* Display list items inline */
+}
+
+nav li a {
+    font-size: 1.3em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 30px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #000000;
+    background-color: #ffffff !important;
+}
+
+/* Home section styling */
+.two-column-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-image: url('mnt_data_image.png'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #000000; 
+}
+
+.image-column {
+    flex: 1;
+    padding: 40px;
+}
+
+.text-column {
+    flex: 1;
+    font-size: 1.20em;
+    margin-top: none;
+    padding: 50px;
+}
+
+
+.text-column span {
+    font-size: 1.5em;
+}
+
+/* Set a maximum width for the image column to prevent the picture from being too large */
+.image-column {
+    max-width: 400px; /* Adjust the value as needed */
+    margin: auto; /* Center the image column */
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+/* About section styling */
+.unique-about-section {
+    background-color: #f9f9f9;
+    padding: 50px 10px;
+}
+
+.unique-about-section h1, span {
+    font-size: 1.5em;
+    text-align: left !important;
+    padding: 10px !important;
+    margin-top: 7px;
+}
+
+.unique-about-section h1 {
+    text-align: center !important;
+    margin-bottom: 10px; /* Adjust the margin bottom as needed */
+}
+
+.unique-about-section hr {
+    margin: 10px auto;
+    border: none; /* Remove the default border */
+    height: 2px; /* Set the desired height */
+    width: 30%; /* Set the desired width (adjust as needed) */
+    background: linear-gradient(to right, red, #b2beb5, rgb(144, 228, 144)); /* Apply the gradient */
+    border-radius: 2px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+
+
+/*Boxes styling*/
+.content-box {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between boxes */
+    max-width: 70%; /* Adjust the width to create space on the right */
+    margin: 0 auto;
+}
+
+.box {
+    flex: 0 0 calc(30% - 20px); /* Adjust the flex basis for smaller boxes */
+    max-width: calc(30% - 20px); /* Adjust the maximum width */
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(161, 6, 6, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box .icon img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.box hr {
+    margin: 10px 0;
+    border: none; /* Remove the default border */
+    height: 1px; /* Set the desired height */
+    background: linear-gradient(to right, rgb(0, 0, 0), #000000, rgb(0, 0, 0)); /* Apply the gradient */
+}
+
+.box p {
+    text-align: justify;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+    .box {
+        flex: 0 0 calc(45% - 20px); /* Adjust width for smaller screens */
+        max-width: calc(45% - 20px); /* Adjust maximum width */
+    }
+}
+
+@media (max-width: 576px) {
+    .box {
+        flex: 0 0 calc(100% - 20px); /* Full width for very small screens */
+        max-width: calc(100% - 20px); /* Adjust maximum width */
+    }
+}
+
+/* Text content styling for read more functionality */
+.text-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-content {
+    display: block;
+}
+
+.read-more {
+    color: #ffffff;
+    font-size: larger;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 25px;
+    border-radius: 10px; /* Adjusted to create a more subtle rounding for a boxy look */
+    background-color: #ff0000;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-more:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed !important;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    animation: slide-in 0.5s ease-out;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff7e5f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth scroll for overflow */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navigation menu link styles */
+.nav-menu a {
+    color: white; /* Link color */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold; /* Make the font bold */
+}
+
+.nav-menu a:hover {
+    background-color: #ffffff;
+    color: rgb(151, 18, 18);
+    font-size: large;
+    border-style: outset;
+    text-shadow: 1px 1px #ffffff;
+}
+
+/* General Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    animation: fadeIn 0.5s;
+}
+
+    @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    }
+    
+    /* Modal Content Box */
+    .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgb(163, 3, 3);
+    animation: slideIn 0.5s;
+    }
+    
+    @keyframes slideIn {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
+    }
+    
+    /* Close Button */
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
+    .close
+    ,
+    .close
+    {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* Heading and Image Styling */
+    .modal-content h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    }
+    
+    .modal-content img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    }
+    
+    /* Paragraph Styling */
+    .modal-content p {
+    font-family: 'Georgia', serif;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.1em;
+    }
+    
+    /* Unordered List Styling */
+    .modal-content ul {
+    font-family: 'Georgia', serif;
+    color: #ff0000;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    padding-left: 20px;
+    font-size: 1.1em;
+    }
+    
+    .modal-content ul li {
+    margin-bottom: 10px;
+    }
