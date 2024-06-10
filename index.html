@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sen. Ibrahim Hassan Dankwambo</title>
-    <link rel="icon" href="gov_picture.png" type="image/png">
     <link rel="stylesheet" href="tolbastyles.css">
     <style>
          nav {
@@ -39,18 +38,7 @@ nav li {
         .read-more-content {
             display: none;
         }
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8);
-        }
+
         .modal-content {
             background-color: #ffffff;
             margin: 5% auto;
@@ -89,16 +77,15 @@ nav li {
             margin-bottom: 10px;
         }
         .modal-content img {
-            max-width: 100%;
+            max-width: 90%;
             height: auto;
             display: block;
             margin: 10px 0;
         }
         .content-box img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
         }
-
 
         .nav-menu a {
             color: white; /* Link color */
@@ -121,7 +108,7 @@ nav li {
     /* General Modal Styles */
     .modal {
         display: none; 
-        position: fixed; 
+        position: left !; 
         z-index: 1; 
         left: 0;
         top: 0;
@@ -130,7 +117,7 @@ nav li {
         overflow: auto;
         background-color: rgb(0,0,0); 
         background-color: rgba(0,0,0,0.4); 
-        animation: fadeIn 1.0s;
+        animation: fadeIn 2.0s;
     }
 
     @keyframes fadeIn {
@@ -183,7 +170,7 @@ nav li {
     .modal-content img {
         display: block;
         margin: 0 auto 20px;
-        max-width: 100%;
+        max-width: 80%;
         border-radius: 10px;
     }
 
@@ -234,14 +221,14 @@ nav li {
             <img src="gov_picture.jpg" alt="Gov. Ibrahim Hassan Dankwambo" class="profile-picture">
         </div>
         <div class="text-column">
-            <h2>Welcome to the Official Website Of <p><span class="color-red">Sen.</span> <span class="color-green">Dankwambo</p></span></h2>
+            <h2>Welcome to the Official Website Of <p><span style="color: red;">Sen.</span> <span style="color: rgb(10, 143, 10);">Dankwambo</span></h2>
                 <hr>
             <p>This platform is dedicated to sharing the journey, vision, and achievements of Sen. Dankwambo.</p>
             <p>Explore the site to learn more about his commitment to education, his impactful political career, and his 
-                dedication to our community. Your support is vital as we strive to continue his legacy of positive change and progress.</p>
+                dedication to our community.</p>
         </div>
     </section>
-    
+   
     <!-- About Section -->
     <section id="about" class="unique-about-section">
         <div class="section-header">
@@ -333,7 +320,6 @@ nav li {
     </div>
 </div>
 
-
     <!-- The Modal for Family -->
     <div id="familyModal" class="modal">
         <div class="modal-content">
@@ -353,9 +339,8 @@ nav li {
             <p>Their family legacy continues with two grandchildren, Ibrahim and Adama, who bring joy and continuity to the family lineage. Hajiya Adama is not only a devoted wife but also a loving and generous mother. Her qualities of patience, understanding, tolerance, and unwavering support have been pivotal in Dankwambo's journey. Her steadfast love and encouragement embody the saying, “behind every successful man, there is a woman,” highlighting her crucial role in his achievements and their shared success.</p>
         </div>
     </div>
-    
-    
-        <script>
+
+    <script>
             document.querySelectorAll('.read-more').forEach(button => {
                 button.addEventListener('click', () => {
                     const modal = document.getElementById(button.getAttribute('data-target'));
@@ -436,4 +421,3 @@ nav li {
 
     </body>
     </html>
-    
