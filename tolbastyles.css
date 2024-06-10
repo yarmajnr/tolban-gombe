@@ -11,16 +11,16 @@ body {
 /* Header styling */
 .header {
     background: #ff0000;
-    color: white;
-    padding: 20px 0;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
     text-align: center;
     position: relative;
 }
 
 .left-logo, .right-logo {
     position: absolute;
-    top: 10px;
-    height: 120px;
+    top: 8px;
+    height: 80px;
 }
 
 .left-logo {
@@ -33,7 +33,7 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.25em;
 }
 
 /* Navigation styling */
@@ -43,13 +43,6 @@ nav {
     text-align: center; /* Center the content horizontally */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Make the list items display in a row */
-    justify-content: center; /* Center the navigation items horizontally */
-}
 
 nav li {
     float: none; /* Remove float */
@@ -57,12 +50,19 @@ nav li {
 }
 
 nav li a {
-    font-size: 1.3em;
+    font-size: 0.75em;
     display: block;
     color: white;
     text-align: center;
     padding: 8px 30px;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
 }
 
 nav li a:hover {
@@ -83,12 +83,12 @@ nav li a:hover {
 
 .image-column {
     flex: 1;
-    padding: 40px;
+    padding: 10px;
 }
 
 .text-column {
     flex: 1;
-    font-size: 1.20em;
+    font-size: 1.0em;
     margin-top: none;
     padding: 50px;
 }
@@ -100,7 +100,7 @@ nav li a:hover {
 
 /* Set a maximum width for the image column to prevent the picture from being too large */
 .image-column {
-    max-width: 400px; /* Adjust the value as needed */
+    max-width: 350px; /* Adjust the value as needed */
     margin: auto; /* Center the image column */
 }
 
@@ -114,13 +114,12 @@ nav li a:hover {
 /* About section styling */
 .unique-about-section {
     background-color: #f9f9f9;
-    padding: 50px 10px;
 }
 
 .unique-about-section h1, span {
-    font-size: 1.5em;
+    font-size: 0.75em;
     text-align: left !important;
-    padding: 10px !important;
+    padding: 0px;
     margin-top: 7px;
 }
 
@@ -138,17 +137,6 @@ nav li a:hover {
     border-radius: 2px;
 }
 
-.section-header {
-    text-align: center;
-}
-
-.section-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-
-
 /*Boxes styling*/
 .content-box {
     display: flex;
@@ -160,8 +148,8 @@ nav li a:hover {
 .box {
     flex: 0 0 calc(30% - 20px); /* Adjust the flex basis for smaller boxes */
     max-width: calc(30% - 20px); /* Adjust the maximum width */
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+    margin: 5px;
     background: #fff;
     box-shadow: 0 0 10px rgba(161, 6, 6, 0.1);
     border-radius: 10px;
@@ -180,7 +168,7 @@ nav li a:hover {
 
 .box h3 {
     text-align: left;
-    font-size: 1.2em;
+    font-size: 0.8em;
     margin-bottom: 10px;
     color: #333;
     font-weight: 600;
@@ -196,7 +184,7 @@ nav li a:hover {
 .box p {
     text-align: justify;
     font-size: 16px;
-    color: #555;
+    color: #000000;
 }
 
 /* Media Query for Responsive Layout */
@@ -222,22 +210,18 @@ nav li a:hover {
     overflow: hidden;
 }
 
-.read-more-content {
-    display: block;
-}
-
 .read-more {
     color: #ffffff;
-    font-size: larger;
+    font-size: none;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
-    padding: 15px 25px;
+    padding: 4px 9px;
     border-radius: 10px; /* Adjusted to create a more subtle rounding for a boxy look */
     background-color: #ff0000;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(255, 0, 0);
 }
 
 .read-more:hover {
@@ -248,19 +232,6 @@ nav li a:hover {
 
 
 /* Modal styling */
-.modal {
-    display: none;
-    position: fixed !important;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: opacity 0.3s ease;
-}
 
 .modal.show {
     display: block;
@@ -295,23 +266,6 @@ nav li a:hover {
     }
 }
 
-.close {
-    color: #333;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #ff7e5f;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .modal-content h2 {
     font-size: 26px;
     margin-bottom: 15px;
@@ -325,15 +279,6 @@ nav li a:hover {
     color: #ffffff;
 }
 
-.modal-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .content-box img {
     max-width: 100%;
     height: auto;
@@ -345,34 +290,17 @@ nav li a:hover {
 }
 
 .modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #50ac05;
     border-radius: 10px;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #ac0707;
     border-radius: 10px;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-/* Navigation menu link styles */
-.nav-menu a {
-    color: white; /* Link color */
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    font-weight: bold; /* Make the font bold */
-}
-
-.nav-menu a:hover {
-    background-color: #ffffff;
-    color: rgb(151, 18, 18);
-    font-size: large;
-    border-style: outset;
-    text-shadow: 1px 1px #ffffff;
 }
 
 /* General Modal Styles */
@@ -395,81 +323,11 @@ nav li a:hover {
     to {opacity: 1;}
     }
     
-    /* Modal Content Box */
-    .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgb(163, 3, 3);
-    animation: slideIn 0.5s;
-    }
-    
     @keyframes slideIn {
     from {transform: translateY(-50px);}
     to {transform: translateY(0);}
     }
-    
-    /* Close Button */
-    .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    }
-    
-    .close
-    ,
-    .close
-    {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    }
-    
-    /* Heading and Image Styling */
-    .modal-content h2 {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    }
-    
-    .modal-content img {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 100%;
-    border-radius: 10px;
-    }
-    
-    /* Paragraph Styling */
-    .modal-content p {
-    font-family: 'Georgia', serif;
-    color: #000000;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-    font-size: 1.1em;
-    }
-    
-    /* Unordered List Styling */
-    .modal-content ul {
-    font-family: 'Georgia', serif;
-    color: #ff0000;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-    padding-left: 20px;
-    font-size: 1.1em;
-    }
-    
-    .modal-content ul li {
-    margin-bottom: 10px;
-    }
+
 /* General styling for sections */
 .coming-soon-section {
     padding: 50px 0;
@@ -479,8 +337,8 @@ nav li a:hover {
 }
 
 .section-header h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .coming-soon-message h2 {
